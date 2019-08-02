@@ -29,24 +29,7 @@ public class BBShooter : MonoBehaviour
         
         {
             fpsCamera.transform.position = transform.position;
-
-            //Debug.Log(fpsCamera.transform.eulerAngles.x);
-            fpsCamera.transform.Rotate(Input.GetAxis("Mouse Y") * cameraSens * -1, 0, 0);
-            //weaponAxis.transform.Rotate(Input.GetAxis("Vertical") * cameraSens, 0, 0);
-            if (fpsCamera.transform.eulerAngles.x < 285f && fpsCamera.transform.eulerAngles.x > 205)
-            {
-                Debug.Log("UPPER OVERFLOW");
-                fpsCamera.transform.eulerAngles = new Vector3(285f, 0, 0);
-                //weaponAxis.transform.eulerAngles = new Vector3(285f, 0, 0);
-            }
-            else if (fpsCamera.transform.eulerAngles.x > 75f && fpsCamera.transform.eulerAngles.x < 145f)
-            {
-                Debug.Log("LOWER OVERFLOW");
-                fpsCamera.transform.eulerAngles = new Vector3(75f, 0, 0);
-                //weaponAxis.transform.eulerAngles = new Vector3(75f, 0, 0);
-            }
-            transform.Rotate(0, Input.GetAxis("Mouse X") * cameraSens, 0);
-            //transform.Rotate(0, Input.GetAxis("Mouse X") * cameraSens, 0);
+            transform.Rotate(0, Input.GetAxis("Mouse X") * cameraSens, 0);;
         }
 
         if (Input.GetButtonDown("Fire1"))
