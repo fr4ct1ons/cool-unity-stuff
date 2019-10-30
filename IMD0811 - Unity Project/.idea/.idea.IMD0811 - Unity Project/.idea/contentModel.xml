@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\gabri\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\gabri\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_IMD0811 - Unity Project.1708658714.00" t="ExcludeRecursive" />
+    <e p="C:\Users\gabri\Documents\Repositories\imd-0811-projects\IMD0811 - Unity Project" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="AirsoftGun" t="Include">
+          <e p="Airgun.cs" t="Include" />
+          <e p="BBBullet.cs" t="Include" />
+          <e p="BBHopUp.cs" t="Include" />
+          <e p="BBShooter.cs" t="Include" />
+        </e>
+        <e p="SpawningSystem" t="Include">
+          <e p="Editor" t="Include">
+            <e p="BezierCurveEditor.cs" t="Include" />
+            <e p="LineEditor.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="BezierCurve.cs" t="Include" />
+            <e p="Line.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="IMD0811 - Unity Project.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
