@@ -2,15 +2,15 @@
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(SpawningSystem))]
-public class SpawningSystemEditor : Editor
+[CustomEditor(typeof(AreaSpawner))]
+public class AreaSpawnerEditor : Editor
 {
-    private SpawningSystem system;
+    private AreaSpawner system;
     private Transform handleTransform;
     private Quaternion handleRotation;
     private void OnSceneGUI()
     {
-        system = target as SpawningSystem;
+        system = target as AreaSpawner;
         handleTransform = system.transform;
         handleRotation = Tools.pivotRotation == PivotRotation.Local?
             handleTransform.rotation : Quaternion.identity;
@@ -24,7 +24,7 @@ public class SpawningSystemEditor : Editor
         p[2].Set(topR.x, handleTransform.position.y, bottomL.z);
         p[3].Set(topR.x, handleTransform.position.y, topR.z);
         
-        Handles.color = Color.green;
+        Handles.color = Color.yellow;
         Handles.DrawLine(p[0], p[1]);
         Handles.DrawLine(p[1], p[3]);
         Handles.DrawLine(p[3], p[2]);

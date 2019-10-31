@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\gabri\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\gabri\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_IMD0811 - Unity Project.1708658714.00" t="ExcludeRecursive" />
-    <e p="C:\Users\gabri\Documents\Repositories\imd-0811-projects\IMD0811 - Unity Project" t="IncludeRecursive">
+    <e p="C:\Users\Lucena\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Lucena\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_IMD0811 - Unity Project.1399554145.00" t="ExcludeRecursive" />
+    <e p="E:\Lucena\Documents\Repositories\imd-0811-projects\IMD0811 - Unity Project" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -15,16 +15,19 @@
         </e>
         <e p="SpawningSystem" t="Include">
           <e p="Editor" t="Include">
+            <e p="AreaSpawnerEditor.cs" t="Include" />
             <e p="BezierCurveEditor.cs" t="Include" />
+            <e p="CircleSpawnerEditor.cs" t="Include" />
             <e p="LineEditor.cs" t="Include" />
-            <e p="SpawningSystemEditor.cs" t="Include" />
           </e>
           <e p="Scripts" t="Include">
+            <e p="AreaSpawner.cs" t="Include" />
             <e p="Bezier.cs" t="Include" />
             <e p="BezierCurve.cs" t="Include" />
+            <e p="CircleSpawner.cs" t="Include" />
             <e p="Line.cs" t="Include" />
             <e p="SpawnerWave.cs" t="Include" />
-            <e p="SpawningSystem.cs" t="Include" />
+            <e p="VolumeSpawner.cs" t="Include" />
           </e>
         </e>
       </e>

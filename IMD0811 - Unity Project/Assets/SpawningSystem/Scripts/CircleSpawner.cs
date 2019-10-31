@@ -8,13 +8,12 @@ using Random = UnityEngine.Random;
 /// <summary>
 /// EnemySpawner class - A simple class that spawns enemies based on a ScriptableWave object.
 /// </summary>
-public class SpawningSystem : MonoBehaviour
+public class CircleSpawner : MonoBehaviour
 {
     [SerializeField] SpawnerWave wave;
     [SerializeField] bool loop;
-
-    public Vector3 topR = new Vector3(-1, -1, -1);
-    public Vector3 bottomL = new Vector3(1, 1, 1); 
+    public float radius;
+    
     Vector3 bufferVector;
     bool canSpawn = true, trigger = false;
     int waveIndex = 0, enemyCount = 1;
@@ -39,7 +38,11 @@ public class SpawningSystem : MonoBehaviour
             }
         }
         canSpawn = false;
-        bufferVector.Set(Random.Range(bottomL.x, topR.x), transform.position.y, Random.Range(bottomL.z, topR.z));
+
+        float a = Random.Range(0.0f, 1.0f) * 2 * Mathf.PI;
+        float r = radius * Mathf.Sqrt(Random.Range(0.0f, 1.0f));
+        bufferVector.Set(r * Mathf.Cos(a), transform.position.y, r * Mathf.Sin(a));
+        
         Instantiate(wave.GetElement(waveIndex), bufferVector, Quaternion.identity); // Spawn the enemy
         enemyCount++; // Count number of the spawned enemies
         yield return new WaitForSeconds(wave.GetSpawnInterval(waveIndex)); // Wait for the time delay for the spawned enemy
