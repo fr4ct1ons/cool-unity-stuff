@@ -2,23 +2,23 @@
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(Line))]
-public class LineEditor : Editor
+[CustomEditor(typeof(LineSpawner))]
+public class LineSpawnerEditor : Editor
 {
-    private Line line;
+    private LineSpawner lineSpawner;
     private Transform handleTransform;
     private Quaternion handleRotation;
     private void OnSceneGUI()
     {
-        line = target as Line;
-        handleTransform = line.transform;
+        lineSpawner = target as LineSpawner;
+        handleTransform = lineSpawner.transform;
         handleRotation = Tools.pivotRotation == PivotRotation.Local?
             handleTransform.rotation : Quaternion.identity;
         Vector3 p0, p1;
-        p0 = handleTransform.TransformPoint(line.p0);
-        p1 = handleTransform.TransformPoint(line.p1);
+        p0 = handleTransform.TransformPoint(lineSpawner.p0);
+        p1 = handleTransform.TransformPoint(lineSpawner.p1);
 
-        Handles.color = Color.white;
+        Handles.color = Color.yellow;
         Handles.DrawLine(p0, p1);
         Handles.DoPositionHandle(p0, handleRotation);
         Handles.DoPositionHandle(p1, handleRotation);
@@ -27,18 +27,27 @@ public class LineEditor : Editor
         p0 = Handles.DoPositionHandle(p0, handleRotation);
         if (EditorGUI.EndChangeCheck()) 
         {
-            Undo.RecordObject(line, "Move p0");
+            Undo.RecordObject(lineSpawner, "Move p0");
             //EditorUtility.SetDirty(line);
-            line.p0 = handleTransform.InverseTransformPoint(p0);
+            lineSpawner.p0 = handleTransform.InverseTransformPoint(p0);
         }
         
         EditorGUI.BeginChangeCheck();
         p1 = Handles.DoPositionHandle(p1, handleRotation);
         if (EditorGUI.EndChangeCheck()) 
         {
-            Undo.RecordObject(line, "Move p1");
+            Undo.RecordObject(lineSpawner, "Move p1");
             //EditorUtility.SetDirty(line);
-            line.p1 = handleTransform.InverseTransformPoint(p1);
+            lineSpawner.p1 = handleTransform.InverseTransformPoint(p1);
+        }
+    }
+    
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+        if (GUILayout.Button("Spawn all"))
+        {
+            lineSpawner.SpawnAll();
         }
     }
 }

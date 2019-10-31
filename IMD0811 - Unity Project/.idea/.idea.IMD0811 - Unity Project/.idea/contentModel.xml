@@ -16,17 +16,17 @@
         <e p="SpawningSystem" t="Include">
           <e p="Editor" t="Include">
             <e p="AreaSpawnerEditor.cs" t="Include" />
-            <e p="BezierCurveEditor.cs" t="Include" />
+            <e p="BezierSpawnerEditor.cs" t="Include" />
             <e p="CircleSpawnerEditor.cs" t="Include" />
-            <e p="LineEditor.cs" t="Include" />
+            <e p="LineSpawnerEditor.cs" t="Include" />
             <e p="VolumeSpawnerEditor.cs" t="Include" />
           </e>
           <e p="Scripts" t="Include">
             <e p="AreaSpawner.cs" t="Include" />
             <e p="Bezier.cs" t="Include" />
-            <e p="BezierCurve.cs" t="Include" />
+            <e p="BezierSpawner.cs" t="Include" />
             <e p="CircleSpawner.cs" t="Include" />
-            <e p="Line.cs" t="Include" />
+            <e p="LineSpawner.cs" t="Include" />
             <e p="SpawnerWave.cs" t="Include" />
             <e p="VolumeSpawner.cs" t="Include" />
           </e>

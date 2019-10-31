@@ -61,10 +61,5 @@ public class VolumeSpawnerEditor : Editor
         {
             system.SpawnAll();
         }
-
-        if (GUILayout.Button("Spawn random"))
-        {
-            system.SpawnRandom();
-        }
     }
 }

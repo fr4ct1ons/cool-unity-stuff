@@ -55,6 +55,20 @@ public class CircleSpawner : MonoBehaviour
 
         canSpawn = true;
     }
+    
+    public void SpawnAll()
+    {
+        for (int i = 0; i < wave.NumOfElements(); i++)
+        {
+            for (int j = 0; j < wave.GetSpawnAmount(i); j++)
+            {
+                float a = Random.Range(0.0f, 1.0f) * 2 * Mathf.PI;
+                float r = radius * Mathf.Sqrt(Random.Range(0.0f, 1.0f));
+                bufferVector.Set(r * Mathf.Cos(a), transform.position.y, r * Mathf.Sin(a));
+                Instantiate(wave.GetElement(i), bufferVector, Quaternion.identity); // Spawn the enemy
+            }
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {

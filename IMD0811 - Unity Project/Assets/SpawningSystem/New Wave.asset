@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementsToSpawn:
   - {fileID: 921645527716991298, guid: a686db6792fc02c4c97a15cfc9fdaad1, type: 3}
-  amountToSpawn: 05000000
+  - {fileID: 133647206942077174, guid: 3913357657af0bf43a5708f622f3b24d, type: 3}
+  amountToSpawn: 0500000003000000
   timeBetweenSpawn:
   - 2
+  - 1.5

@@ -1,24 +1,32 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
+using UnityEditor;
 using Random = UnityEngine.Random;
 
-
-/// <summary>
-/// EnemySpawner class - A simple class that spawns enemies based on a ScriptableWave object.
-/// </summary>
-public class AreaSpawner : MonoBehaviour
+public class BezierSpawner : MonoBehaviour
 {
-    [SerializeField] SpawnerWave wave;
-    [SerializeField] bool loop;
+    [SerializeField] private SpawnerWave wave;
+    [SerializeField] private bool loop;
+    
+    public Vector3[] points;
 
-    public Vector3 topR = new Vector3(-1, -1, -1);
-    public Vector3 bottomL = new Vector3(1, 1, 1); 
-    Vector3 bufferVector;
-    bool canSpawn = true, trigger = false;
-    int waveIndex = 0, enemyCount = 1;
+    private Vector3 bufferVector;
+    private bool trigger = false, canSpawn = true;
+    private int waveIndex = 0, enemyCount = 1;
 
+    private void Reset()
+    {
+        points = new Vector3[]
+        {
+            new Vector3(1, 0, 0),
+            new Vector3(2, 0, 0),
+            new Vector3(3, 0, 0),
+            new Vector3(4, 0, 0)
+        };
+    }
+    
     void Update()
     {
         if (trigger && canSpawn)
@@ -39,7 +47,7 @@ public class AreaSpawner : MonoBehaviour
             }
         }
         canSpawn = false;
-        bufferVector.Set(Random.Range(bottomL.x, topR.x), transform.position.y, Random.Range(bottomL.z, topR.z));
+        bufferVector = GetPoint(Random.Range(0.0f, 1.0f));
         Instantiate(wave.GetElement(waveIndex), bufferVector, Quaternion.identity); // Spawn the enemy
         enemyCount++; // Count number of the spawned enemies
         yield return new WaitForSeconds(wave.GetSpawnInterval(waveIndex)); // Wait for the time delay for the spawned enemy
@@ -65,9 +73,23 @@ public class AreaSpawner : MonoBehaviour
         {
             for (int j = 0; j < wave.GetSpawnAmount(i); j++)
             {
-                bufferVector.Set(Random.Range(bottomL.x, topR.x), transform.position.y, Random.Range(bottomL.z, topR.z));
+                bufferVector = GetPoint(Random.Range(0.0f, 1.0f));
                 Instantiate(wave.GetElement(i), bufferVector, Quaternion.identity); // Spawn the enemy
             }
         }
+    }
+
+    public Vector3 GetPoint(float t)
+    {
+        return transform.TransformPoint(Bezier.GetPoint(points[0], points[1], points[2], points[3], t));
+    }
+    
+    public Vector3 GetVelocity (float t) {
+        return transform.TransformPoint(Bezier.GetFirstDerivative(points[0], points[1], points[2], points[3], t)) -
+               transform.position;
+    }
+    
+    public Vector3 GetDirection (float t) {
+        return GetVelocity(t).normalized;
     }
 }

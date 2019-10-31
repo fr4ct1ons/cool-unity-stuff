@@ -18,4 +18,13 @@ public class CircleSpawnerEditor : Editor
         Handles.color = Color.yellow;
         Handles.DrawWireDisc(system.transform.position, system.transform.up, system.radius);
     }
+    
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+        if (GUILayout.Button("Spawn all"))
+        {
+            system.SpawnAll();
+        }
+    }
 }

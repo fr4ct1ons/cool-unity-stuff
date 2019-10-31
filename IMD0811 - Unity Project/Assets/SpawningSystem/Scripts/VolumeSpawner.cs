@@ -68,10 +68,4 @@ public class VolumeSpawner : MonoBehaviour
             }
         }
     }
-
-    public void SpawnRandom()
-    {
-        bufferVector.Set(Random.Range(bottomL.x, topR.x), Random.Range(bottomL.y, topR.y), Random.Range(bottomL.z, topR.z));
-        Instantiate(wave.GetElement(Random.Range(0, wave.NumOfElements() - 1)), bufferVector, Quaternion.identity); // Spawn the enemy
-    }
 }

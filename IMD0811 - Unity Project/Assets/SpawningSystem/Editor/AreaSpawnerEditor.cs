@@ -49,4 +49,13 @@ public class AreaSpawnerEditor : Editor
             system.topR = handleTransform.InverseTransformPoint(bottomL);
         }
     }
+    
+    public override void OnInspectorGUI()
+    {
+        base.OnInspectorGUI();
+        if (GUILayout.Button("Spawn all"))
+        {
+            system.SpawnAll();
+        }
+    }
 }
