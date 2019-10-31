@@ -19,6 +19,7 @@
             <e p="BezierCurveEditor.cs" t="Include" />
             <e p="CircleSpawnerEditor.cs" t="Include" />
             <e p="LineEditor.cs" t="Include" />
+            <e p="VolumeSpawnerEditor.cs" t="Include" />
           </e>
           <e p="Scripts" t="Include">
             <e p="AreaSpawner.cs" t="Include" />

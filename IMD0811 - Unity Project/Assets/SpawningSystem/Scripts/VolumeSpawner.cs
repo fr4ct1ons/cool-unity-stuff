@@ -39,8 +39,6 @@ public class VolumeSpawner : MonoBehaviour
             }
         }
         canSpawn = false;
-        bufferVector.Set(Random.Range(bottomL.x, topR.x), transform.position.y, Random.Range(bottomL.z, topR.z));
-        Instantiate(wave.GetElement(waveIndex), bufferVector, Quaternion.identity); // Spawn the enemy
         enemyCount++; // Count number of the spawned enemies
         yield return new WaitForSeconds(wave.GetSpawnInterval(waveIndex)); // Wait for the time delay for the spawned enemy
         
@@ -57,5 +55,23 @@ public class VolumeSpawner : MonoBehaviour
     {
         if(!trigger)
             trigger = true;
+    }
+
+    public void SpawnAll()
+    {
+        for (int i = 0; i < wave.NumOfElements(); i++)
+        {
+            for (int j = 0; j < wave.GetSpawnAmount(i); j++)
+            {
+                bufferVector.Set(Random.Range(bottomL.x, topR.x), Random.Range(bottomL.y, topR.y), Random.Range(bottomL.z, topR.z));
+                Instantiate(wave.GetElement(i), bufferVector, Quaternion.identity); // Spawn the enemy
+            }
+        }
+    }
+
+    public void SpawnRandom()
+    {
+        bufferVector.Set(Random.Range(bottomL.x, topR.x), Random.Range(bottomL.y, topR.y), Random.Range(bottomL.z, topR.z));
+        Instantiate(wave.GetElement(Random.Range(0, wave.NumOfElements() - 1)), bufferVector, Quaternion.identity); // Spawn the enemy
     }
 }
