@@ -19,6 +19,7 @@
             <e p="BezierSpawnerEditor.cs" t="Include" />
             <e p="CircleSpawnerEditor.cs" t="Include" />
             <e p="LineSpawnerEditor.cs" t="Include" />
+            <e p="PolygonSpawnerEditor.cs" t="Include" />
             <e p="VolumeSpawnerEditor.cs" t="Include" />
           </e>
           <e p="Scripts" t="Include">
@@ -27,6 +28,7 @@
             <e p="BezierSpawner.cs" t="Include" />
             <e p="CircleSpawner.cs" t="Include" />
             <e p="LineSpawner.cs" t="Include" />
+            <e p="PolygonSpawner.cs" t="Include" />
             <e p="SpawnerWave.cs" t="Include" />
             <e p="VolumeSpawner.cs" t="Include" />
           </e>
