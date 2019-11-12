@@ -32,7 +32,7 @@ public class LineSpawner : MonoBehaviour
             }
         }
         canSpawn = false;
-        bufferVector = Vector3.Lerp(p0, p1, Random.Range(0.0f, 1.0f));
+        bufferVector = Vector3.Lerp(transform.TransformPoint(p0), transform.TransformPoint(p1), Random.Range(0.0f, 1.0f));
         Instantiate(wave.GetElement(waveIndex), bufferVector, Quaternion.identity); // Spawn the enemy
         enemyCount++; // Count number of the spawned enemies
         yield return new WaitForSeconds(wave.GetSpawnInterval(waveIndex)); // Wait for the time delay for the spawned enemy
@@ -58,7 +58,7 @@ public class LineSpawner : MonoBehaviour
         {
             for (int j = 0; j < wave.GetSpawnAmount(i); j++)
             {
-                bufferVector = Vector3.Lerp(p0, p1, Random.Range(0.0f, 1.0f));
+                bufferVector = Vector3.Lerp(transform.TransformPoint(p0), transform.TransformPoint(p1), Random.Range(0.0f, 1.0f));
                 Instantiate(wave.GetElement(i), bufferVector, Quaternion.identity); // Spawn the enemy
             }
         }

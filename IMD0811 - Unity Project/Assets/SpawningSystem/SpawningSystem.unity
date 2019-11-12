@@ -815,7 +815,7 @@ GameObject:
   - component: {fileID: 1897963048}
   - component: {fileID: 1897963047}
   m_Layer: 0
-  m_Name: Polygon Spawner (1)
+  m_Name: Polygon Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -833,10 +833,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95ae14742083b7e488160b54a343e76c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wave: {fileID: 11400000, guid: eb4f3e116b67c7946b1ce43b5763a658, type: 2}
+  loop: 0
   points:
-  - {x: 0.33476728, y: 0, z: 0}
-  - {x: 2.686236, y: 0, z: 1}
-  - {x: 2.155286, y: 0, z: 2}
+  - {x: 1, y: 0, z: 0.3685522}
+  - {x: 3, y: 0, z: 0}
+  - {x: 0.6708672, y: 0, z: 2.5332558}
+  - {x: 1, y: 0, z: 4.75766}
+  - {x: -1.649301, y: 0, z: 4}
 --- !u!65 &1897963048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -858,7 +862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897963046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.583, z: 0}
+  m_LocalPosition: {x: 0, y: 2.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

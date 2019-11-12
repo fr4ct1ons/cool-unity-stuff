@@ -17,5 +17,5 @@ MonoBehaviour:
   - {fileID: 133647206942077174, guid: 3913357657af0bf43a5708f622f3b24d, type: 3}
   amountToSpawn: 0500000003000000
   timeBetweenSpawn:
-  - 2
-  - 1.5
+  - 0
+  - 0

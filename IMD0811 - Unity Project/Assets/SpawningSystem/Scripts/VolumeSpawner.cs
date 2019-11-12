@@ -40,6 +40,10 @@ public class VolumeSpawner : MonoBehaviour
         }
         canSpawn = false;
         enemyCount++; // Count number of the spawned enemies
+        
+        bufferVector.Set(Random.Range(bottomL.x, topR.x), Random.Range(bottomL.y, topR.y), Random.Range(bottomL.z, topR.z));
+        bufferVector = transform.TransformPoint(bufferVector);
+        Instantiate(wave.GetElement(waveIndex), bufferVector, Quaternion.identity); // Spawn the enemy
         yield return new WaitForSeconds(wave.GetSpawnInterval(waveIndex)); // Wait for the time delay for the spawned enemy
         
         if (enemyCount > wave.GetSpawnAmount(waveIndex)) // If the required number of enemies was spawned: Advance in the list
@@ -64,6 +68,7 @@ public class VolumeSpawner : MonoBehaviour
             for (int j = 0; j < wave.GetSpawnAmount(i); j++)
             {
                 bufferVector.Set(Random.Range(bottomL.x, topR.x), Random.Range(bottomL.y, topR.y), Random.Range(bottomL.z, topR.z));
+                bufferVector = transform.TransformPoint(bufferVector);
                 Instantiate(wave.GetElement(i), bufferVector, Quaternion.identity); // Spawn the enemy
             }
         }

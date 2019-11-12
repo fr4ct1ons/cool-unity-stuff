@@ -52,5 +52,10 @@ using UnityEditor;
          {
              polygonSpawner.points.Add(new Vector3(polygonSpawner.points.Count, 0, polygonSpawner.points.Count));
          }
+
+         if (GUILayout.Button("Spawn all"))
+         {
+             polygonSpawner.SpawnAll();
+         }
      }
  }

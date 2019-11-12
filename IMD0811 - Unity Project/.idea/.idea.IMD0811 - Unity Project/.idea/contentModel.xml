@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Lucena\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Lucena\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_IMD0811 - Unity Project.1399554145.00" t="ExcludeRecursive" />
-    <e p="E:\Lucena\Documents\Repositories\imd-0811-projects\IMD0811 - Unity Project" t="IncludeRecursive">
+    <e p="C:\Users\gabri\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\gabri\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_IMD0811 - Unity Project.1708658714.00" t="ExcludeRecursive" />
+    <e p="C:\Users\gabri\Documents\Repositories\imd-0811-projects\IMD0811 - Unity Project" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
