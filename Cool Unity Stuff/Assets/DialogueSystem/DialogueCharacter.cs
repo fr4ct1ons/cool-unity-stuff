@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "New Dialog Character", menuName = "Dialog Character")]
-public class DialogCharacter : ScriptableObject
+[CreateAssetMenu(fileName = "New Dialogue Character", menuName = "Dialogue Character")]
+public class DialogueCharacter : ScriptableObject
 {
     [Tooltip("Name of the character.")]
     [SerializeField] string characterName;

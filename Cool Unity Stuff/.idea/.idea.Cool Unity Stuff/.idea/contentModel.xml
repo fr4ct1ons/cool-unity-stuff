@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Lucena\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Lucena\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Cool Unity Stuff.-501604909.00" t="ExcludeRecursive" />
+    <e p="E:\Lucena\Documents\Repositories\imd-0811-projects\Cool Unity Stuff" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="AirsoftGun" t="Include">
+          <e p="Airgun.cs" t="Include" />
+          <e p="BBBullet.cs" t="Include" />
+          <e p="BBHopUp.cs" t="Include" />
+          <e p="BBShooter.cs" t="Include" />
+          <e p="Item.cs" t="Include" />
+          <e p="ItemViewer.cs" t="Include" />
+          <e p="PickableItem.cs" t="Include" />
+        </e>
+        <e p="BasicPlayerController.cs" t="Include" />
+        <e p="DialogueSystem" t="Include">
+          <e p="DialogueCharacter.cs" t="Include" />
+          <e p="DialogueReader.cs" t="Include" />
+          <e p="PepeCustomDialogue.cs" t="Include" />
+        </e>
+        <e p="SpawningSystem" t="Include">
+          <e p="Editor" t="Include">
+            <e p="AreaSpawnerEditor.cs" t="Include" />
+            <e p="BezierSpawnerEditor.cs" t="Include" />
+            <e p="CircleSpawnerEditor.cs" t="Include" />
+            <e p="LineSpawnerEditor.cs" t="Include" />
+            <e p="PolygonSpawnerEditor.cs" t="Include" />
+            <e p="VolumeSpawnerEditor.cs" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="AreaSpawner.cs" t="Include" />
+            <e p="Bezier.cs" t="Include" />
+            <e p="BezierSpawner.cs" t="Include" />
+            <e p="CircleSpawner.cs" t="Include" />
+            <e p="LineSpawner.cs" t="Include" />
+            <e p="PolygonSpawner.cs" t="Include" />
+            <e p="SpawnerWave.cs" t="Include" />
+            <e p="VolumeSpawner.cs" t="Include" />
+          </e>
+        </e>
+        <e p="TextMesh Pro" t="Include">
+          <e p="Fonts" t="Include">
+            <e p="LiberationSans - OFL.txt" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="LineBreaking Following Characters.txt" t="Include" />
+            <e p="LineBreaking Leading Characters.txt" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="TMP_Bitmap-Custom-Atlas.shader" t="Include" />
+              <e p="TMP_Bitmap-Mobile.shader" t="Include" />
+              <e p="TMP_Bitmap.shader" t="Include" />
+              <e p="TMP_SDF Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Masking.shader" t="Include" />
+              <e p="TMP_SDF-Mobile Overlay.shader" t="Include" />
+              <e p="TMP_SDF-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface-Mobile.shader" t="Include" />
+              <e p="TMP_SDF-Surface.shader" t="Include" />
+              <e p="TMP_SDF.shader" t="Include" />
+              <e p="TMP_Sprite.shader" t="Include" />
+              <e p="TMPro.cginc" t="Include" />
+              <e p="TMPro_Properties.cginc" t="Include" />
+              <e p="TMPro_Surface.cginc" t="Include" />
+            </e>
+          </e>
+          <e p="Sprites" t="Include">
+            <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Cool Unity Stuff.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
