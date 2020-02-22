@@ -118,11 +118,11 @@ public class DialogueReader : MonoBehaviour
         {
             //testText.text = "Well, that's all.";
             Time.timeScale = 1.0f;
-            Destroy(transform.parent.gameObject);
+            Destroy(gameObject);
         }
     }
 
-    protected virtual void SetDialog(string newFile, DialogueCharacter charLeft, DialogueCharacter charRight)
+    protected virtual void SetNewDialogueFile(string newFile, DialogueCharacter charLeft, DialogueCharacter charRight)
     {
 
         fileName = newFile;
@@ -151,6 +151,42 @@ public class DialogueReader : MonoBehaviour
                 Debug.Log("Error, value is " + separated[1]);
             }
             Debug.Log(separated);
+            dialogueText.text = separated[2];
+        }
+        //catch (System.Exception e)
+        {
+            //dialogueText.text = "Could not open file :(";
+        }
+    }
+    
+    public virtual void SetNewDialogueFile(string newFile)
+    {
+
+        file.Close();
+        
+        fileName = newFile;
+
+        //try
+        {
+            file = new StreamReader(fileName);
+            separated = file.ReadLine().Split('|');
+            //Debug.Log(separated[2]);
+            int Id, index;
+            if (int.TryParse(separated[1], out Id))
+            {
+                Debug.Log("Success! Value is " + Id);
+                if (int.TryParse(separated[0], out index))
+                {
+                    Debug.Log("Also got the index! It's character" + index);
+                    characters[index - 1].GetComponent<Image>().sprite = charactersInfo[index - 1].GetSprite((uint)Id - 1);
+                    characterName.SetText(charactersInfo[index - 1].GetName());
+                    dialogueText.color = charactersInfo[index - 1].GetColor();
+                }
+            }
+            else
+            {
+                Debug.Log("Error, value is " + separated[1]);
+            }
             dialogueText.text = separated[2];
         }
         //catch (System.Exception e)

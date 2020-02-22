@@ -9,6 +9,7 @@ public class PepeCustomDialogue : DialogueReader
 {
 
     [SerializeField] private Button nextMessage;
+    [SerializeField] private GameObject responseButtons;
 
     /// <summary>
     /// Called AFTER opening the file successfully. Override this method to include methods in the dialogueMethods dictionary.
@@ -30,7 +31,6 @@ public class PepeCustomDialogue : DialogueReader
 
     private void ActivateButton(string[] notUsed)
     {
-        Debug.Log("<color=red>IT WORKS</color>");
-        //nextMessage.interactable = false;
+        responseButtons.SetActive(true);
     }
 }

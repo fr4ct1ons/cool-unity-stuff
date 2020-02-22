@@ -15,7 +15,9 @@ MonoBehaviour:
   characterName: Pepe
   expressions:
   - {fileID: 21300000, guid: 0bbfce593ec4c6b47912f897ddf41573, type: 3}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: fb3b3f66ad50ab84499768a57dfde205, type: 3}
+  - {fileID: 21300000, guid: 9500a8d126474834eb2d0d7a0260b7ff, type: 3}
+  - {fileID: 21300000, guid: ec164c3299f4cd04d8a7d02a76e4b7fd, type: 3}
   textColor:
     serializedVersion: 2
     rgba: 4283880523
