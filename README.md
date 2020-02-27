@@ -1,2 +1,6 @@
 # cool-unity-stuff
-A series of projects I may be working on for a college subject on advanced Unity Engine techniques. Each project will have its own folder in the root of the "Assets" folder in the actual Unity project.
+Some cool unity stuff such as a dialogue and inventory system.  
+
+**AirsoftGun**: Airsoft weapon simulation with the magnus effect.  
+**SpawningSystem**: A spawning system that randomly spawns multiple objects in various shapes such as circles, cubes and curves.  
+**DialogueSystem**: Dialogue system that reads from a file and also supports answer options with delegates, similar to Skyrim.  
